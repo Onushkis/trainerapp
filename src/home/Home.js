@@ -16,7 +16,7 @@ const home = () => {
       </div>
       </div>
       <div class="flex flex-row-reverse mt-6 text-[36px] font-bold text-[#9E9E9E]"> <FiX /></div>
-    <div class="text-[36px] font-bold font-poppins p-22">
+    <div class="text-[36px]  font-poppins  mt-16 space-y-6 ">
     <h1 >Home</h1>
      <h1>Search</h1>
      <h1>My Schedule</h1>
