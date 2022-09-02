@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route, } from "react-router-dom";
-import Home from "./home/Home";
+import Home from "./home/Home.jsx";
 import Search from "./search/Search";
 import PopularClasses from "./popularClasses/PopularClasses";
 import MySchedule from "./mySchedule/MySchedule";
