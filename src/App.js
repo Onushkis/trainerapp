@@ -4,6 +4,7 @@ import Search from './search/Search'
 import PopularClasses from './popularClasses/PopularClasses'
 import MySchedule from './mySchedule/MySchedule'
 import ClassesDetail from './classesDetail/ClassesDetail.jsx'
+import Login from './login/Login.jsx'
 import NotFound from './NotFound'
 
 import './App.css'
@@ -18,6 +19,8 @@ function App() {
           <Route path="popularClasses" element={<PopularClasses />} />
           <Route path="mySchedule" element={<MySchedule />} />
           <Route path="classesDetail" element={<ClassesDetail />} />
+          <Route path="login" element={<Login />} />
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>
