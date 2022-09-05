@@ -21,13 +21,13 @@ const Home = () => {
         <FiX />
       </div>
       <div className="text-[36px]  font-poppins  mt-16 space-y-6 ">
-        <h1>Home</h1>
+        <h1  role="button" onClick={()=>navigate('PopularClasses')}>Home</h1>
         <h1 role="button" onClick={()=>navigate('search')}>
           Search
         </h1>
-        <h1>My Schedule</h1>
-        <h1>Home</h1>
-        <h1>Log out</h1>
+        <h1 role="button" onClick={()=>navigate('MySchedule')}>My Schedule</h1>
+        
+        <h1 role="button" onClick={()=>navigate('Logout')}>Log out</h1>
       </div>
     </div>
   )

@@ -1,36 +1,28 @@
-import {BrowserRouter, Routes, Route, } from "react-router-dom";
-import Home from "./home/Home.jsx";
-import Search from "./search/Search";
-import PopularClasses from "./popularClasses/PopularClasses";
-import MySchedule from "./mySchedule/MySchedule";
-import NotFound from "./NotFound";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './home/Home.jsx'
+import Search from './search/Search'
+import PopularClasses from './popularClasses/PopularClasses'
+import MySchedule from './mySchedule/MySchedule'
+import ClassesDetail from './classesDetail/ClassesDetail.jsx'
+import NotFound from './NotFound'
 
-import './App.css';
+import './App.css'
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="search" element={<Search />}/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="search" element={<Search />} />
 
-      <Route path="popularClasses" element={<PopularClasses />}/>
-      <Route path="mySchedule" element={<MySchedule />}/>
+          <Route path="popularClasses" element={<PopularClasses />} />
+          <Route path="mySchedule" element={<MySchedule />} />
+          <Route path="classesDetail" element={<ClassesDetail />} />
 
-
-<Route path="*" element={<NotFound />} />
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
-      
     </div>
-  );
+  )
 }
-export default App;
-
-
-
-
-      
-      
-      
-
+export default App
