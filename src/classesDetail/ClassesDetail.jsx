@@ -81,11 +81,11 @@ useEffect (()=>{
 
         <section className=' mt-40 text-[#F1C40E] font-bold text-[36px] ml-4'> 
 
-<h1 className='text-left'>{activeClass.className}</h1>
+<h1 className='text-left text-[36px] '>{activeClass.className}</h1>
 
 <div className='flex mt-6 justify-between items-center' >
   <h1>Rate</h1>
-  <button className='border-2 border-[#F1C40E] w-48 rounded-full p-1 ml-20'>Rate</button>
+  <button className='border-2 border-[#F1C40E]  w-40 rounded-full p-1 ml-20'>Rate</button>
 </div>
 </section >
 </>) : null}
@@ -96,16 +96,16 @@ useEffect (()=>{
                   { activeClass ? (<>
 
 <main className='p-8'>
-  <div className='text-left'>
-  <h1> {activeClass.classDay} - {activeClass.classTime} </h1>
-<h1>{activeClass.classDescription}</h1>
+  <div className='text-left mt-2 '>
+  <h1 className='mb-4 font-semibold text-[#000000]  text-[20px] '> {activeClass.classDay} - {activeClass.classTime} </h1>
+<h1  className='mb-4 font-semibold text-[#000000]  text-[20px] '>{activeClass.classDescription}</h1>
   </div>
 {activeTrainer ? (<>
 
-  <h2 className='bold text-left mt-6'>Trainer</h2>
+  <h2 className='text-left mt-6  mb-4 font-bold text-[#000000]  text-[30px] '>Trainer</h2>
 <section className='flex items-center mt-6'>
   <img src={activeTrainer.asset.url} alt="" width="100" className='aspect-square rounded-lg  object-cover ' />
-<h3 className='ml-4'>  {activeTrainer.trainerName}</h3>
+<h3 className='ml-4 font-bold text-[#000000]  text-[20px] '>  {activeTrainer.trainerName}</h3>
 </section>
 
 </>):null}
@@ -113,16 +113,28 @@ useEffect (()=>{
 <h1 className="mt-16 flex justify-items-start font-bold text-[#000000] text-[24px] font-poppins ">
 </h1>
 
-
-
+{/* <input type="search"
+ id="search" 
+ className="block p-4 pl-14 w-full text-[24px] text-center text-black  font-bold bg-[#F1C40E] rounded-full hover:bg-[#dddbd4] focus:outline-none focus:ring focus:ring-[[#dddbd4]]" placeholder="SIGN UP" required 
+       
+ /> */}
+      <input type="search" id="search" className="block p-4 pl-14 w-full text-[24px] text-center font-bold  text-[#000000] bg-[#F1C40E]  border-none focus:border-blue-500  rounded-full   dark:focus:ring-[#9771f3] dark:focus:border-[#9771f3] hover:bg-[#dddbd4] focus:outline-none focus:ring focus:ring-[#9771f3]" placeholder="SIGN UP" required 
+        /* value={searchKey}
+        onChange={(event)=> onSearchHandler(event) 
+        } */
+        
+        />
 
 </main>
 </>):null}
 
         </div>
         </div>
-    
-  )
+
+)
 }
 
 export default ClassesDetail
+
+
+    
