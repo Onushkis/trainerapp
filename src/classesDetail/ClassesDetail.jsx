@@ -113,11 +113,6 @@ useEffect (()=>{
 <h1 className="mt-16 flex justify-items-start font-bold text-[#000000] text-[24px] font-poppins ">
 </h1>
 
-{/* <input type="search"
- id="search" 
- className="block p-4 pl-14 w-full text-[24px] text-center text-black  font-bold bg-[#F1C40E] rounded-full hover:bg-[#dddbd4] focus:outline-none focus:ring focus:ring-[[#dddbd4]]" placeholder="SIGN UP" required 
-       
- /> */}
       <input type="search" id="search" className="block p-4 pl-14 w-full text-[24px] text-center font-bold  text-[#000000] bg-[#F1C40E]  border-none focus:border-blue-500  rounded-full   dark:focus:ring-[#9771f3] dark:focus:border-[#9771f3] hover:bg-[#dddbd4] focus:outline-none focus:ring focus:ring-[#9771f3]" placeholder="SIGN UP" required 
         /* value={searchKey}
         onChange={(event)=> onSearchHandler(event) 

@@ -5,6 +5,7 @@ import PopularClasses from './popularClasses/PopularClasses'
 import MySchedule from './mySchedule/MySchedule'
 import ClassesDetail from './classesDetail/ClassesDetail.jsx'
 import Login from './login/Login.jsx'
+import Wellcome from './wellcome/Wellcome.jsx'
 import NotFound from './NotFound'
 
 import './App.css'
@@ -13,14 +14,17 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path="wellcome" element={<Wellcome />} />
+
           <Route path="/" element={<Home />} />
           <Route path="search" element={<Search />} />
 
           <Route path="popularClasses" element={<PopularClasses />} />
           <Route path="mySchedule" element={<MySchedule />} />
           <Route path="classesDetail" element={<ClassesDetail />} />
-          <Route path="login" element={<Login />} />
 
+          {/* todo :^add middlewares for handling authantication */}
+          <Route path="login" element={<Login />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -103,7 +103,10 @@ setSearchKey(event.target.value)
         </h1>
 
         <div className="flex mt-8 gap-2 h-4/6 w-full overflow-x-auto">
-         
+      
+        {(allClasses && allClasses.length && (!searchClasses || !searchClasses.length)) ? (<>”Your search did not give any results. Try to search for something else.”</>) : null }
+
+
           {searchClasses.map((element,index) => {
             return (
           <div key={element.id}
