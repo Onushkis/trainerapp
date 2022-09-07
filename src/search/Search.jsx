@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router'
 import axios from 'axios'
 import { FaBatteryFull, FaSignal } from 'react-icons/fa'
 import { HiRss } from 'react-icons/hi'
@@ -8,6 +9,7 @@ import { HiArrowSmLeft } from 'react-icons/hi'
 
 const Search = () => {
   const [allClasses, setAllClasses] = useState([])
+  const navigate = useNavigate()
 
   const fetchClasses = async () => {
     const responce = await axios.get('http://localhost:4000/api/v1/classes')
@@ -73,7 +75,10 @@ setSearchKey(event.target.value)
             Search
           </h1>
         </div>
-        <div className="flex flex-row-reverse  text-[46px] font-bold text-[#9E9E9E] ">
+        <div className="flex flex-row-reverse  text-[46px] font-bold text-[#9E9E9E] "  role="button" onClick={() => navigate({
+          pathname:'/',
+          search:'page=search'
+        })}>
           {' '}
           <HiMenuAlt3 />
         </div>

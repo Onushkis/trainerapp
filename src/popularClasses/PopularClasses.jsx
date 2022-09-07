@@ -46,7 +46,10 @@ const navigateToClassDetailsPageHandler = (id) => {
         </div>
         <div  className='flex justify-between items-center'> 
         <h1 className=' text-[#000000] font-semibold text-[30px]'>Popular classes</h1>
-        <div className="flex flex-row-reverse mt-6 text-[46px] font-bold text-[#9E9E9E] "> <HiMenuAlt3 /></div>
+        <div className="flex flex-row-reverse mt-6 text-[46px] font-bold text-[#9E9E9E] " role="button" onClick={() => navigate({
+          pathname:'/',
+          search:'page=popularClasses'
+        })}> <HiMenuAlt3 /></div>
         </div>
 
         {randClass ? (<>

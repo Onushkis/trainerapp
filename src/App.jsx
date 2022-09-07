@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import Home from './home/Home.jsx'
 import Search from './search/Search'
 import PopularClasses from './popularClasses/PopularClasses'
@@ -10,6 +11,22 @@ import NotFound from './NotFound'
 
 import './App.css'
 function App() {
+
+  // check if the token isn't expired
+  // that is not the best way to do it
+  useEffect(() => {
+    const userData = window.localStorage.getItem('user')
+
+    if(userData){
+      const tokenExpirationDate = new Date(JSON.parse(userData).validUntil)
+
+      if(tokenExpirationDate <= new Date()){
+      window.localStorage.removeItem('user')
+    }
+    }
+
+  }, [])
+
   return (
     <div className="App">
       <BrowserRouter>

@@ -21,6 +21,12 @@ const fetchUserData = async () => {
   const response = await axios.get(`http://localhost:4000/api/v1/users/${userData.userId}`)
   setAllUserData(response.data)
 }
+useEffect(()=>{
+  if(!userData || !userData.token) return
+  axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`;
+  fetchUserData()
+
+},[userData])
 
 useEffect(()=>{
   // todo : implement proper middlewares to handle auth
@@ -34,12 +40,7 @@ useEffect(()=>{
 }
   ,[])
 
-  useEffect(()=>{
-    if(!userData || !userData.token) return
-    axios.defaults.headers.common['Authorization'] = `Bearer ${userData.token}`;
-    fetchUserData()
-
-  },[userData])
+ 
 
   const navigateToClassDetailsPageHandler = (id) => {
     if(!id) return 
@@ -73,7 +74,10 @@ useEffect(()=>{
             My Schedule
           </h1>
         </div>
-        <div className="flex flex-row-reverse  text-[46px] font-bold text-[#9E9E9E] ">
+        <div className="flex flex-row-reverse  text-[46px] font-bold text-[#9E9E9E] " role="button" onClick={() => navigate({
+          pathname:'/',
+          search:'page=mySchedule'
+        })}>
           {' '}
           <HiMenuAlt3 />
         </div>
