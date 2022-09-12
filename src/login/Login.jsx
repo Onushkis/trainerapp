@@ -24,6 +24,7 @@ useEffect(()=>{
      e.preventDefault();
     try {
         const response = await axios.post('http://localhost:4000/auth/token' , {username , password})
+        
     // not secure , todo : fix it later
     window.localStorage.setItem('user' , JSON.stringify(response.data))
     setTimeout(()=>{
@@ -62,7 +63,6 @@ useEffect(()=>{
        
         </form>
         
-        
         </div>
         
      </main>
@@ -70,5 +70,6 @@ useEffect(()=>{
 
   )
 }
-
+        
 export default Login
+

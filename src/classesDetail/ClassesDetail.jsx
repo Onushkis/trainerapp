@@ -8,10 +8,6 @@ import { HiMenuAlt3} from "react-icons/hi";
 import { HiArrowSmLeft } from "react-icons/hi";
 import abs1 from '../Assets/abs1.jpg'
 
-
-
-
-
 const ClassesDetail = () => {
 
   const [activeClass, setActiveClass] = useState();
@@ -34,7 +30,8 @@ const fetchClassData = async (id)=>{
   setActiveClass(response.data)
   fetchActiveTrainer(response.data.trainerId)
   }
-  
+
+
   const fetchActiveTrainer = async (id)=>{
     if(!id) return 
     setIsLoading(true)
@@ -59,20 +56,23 @@ const fetchClassData = async (id)=>{
     
     },[userData])
 
-useEffect(()=>{
-  isTheUserAlreadyEnrolledInClass()
-}, [allUserData])
+  
+    useEffect(()=>{
+      isTheUserAlreadyEnrolledInClass()
+    }, [allUserData])
 
-useEffect (()=>{
 
-  if(!id){
-    navigate({
-          pathname: '/PopularClasses',
-        });
+    useEffect (()=>{
+    
+      if(!id){
+        navigate({
+              pathname: '/PopularClasses',
+            });
+    
+        return;
+        }
+        fetchClassData(id)
 
-    return;
-    }
-    fetchClassData(id)
    
 const userDataFromStorage = window.localStorage.getItem('user')
 if(userDataFromStorage) setUserData(JSON.parse(userDataFromStorage))

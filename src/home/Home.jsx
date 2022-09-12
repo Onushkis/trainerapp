@@ -15,11 +15,15 @@ const navigateToLastPageIfAny = () => {
   navigate(page)
 }
 
+// 'If its login ...
+
 const isLoggedin = () => {
   const userDetails = window.localStorage.getItem('user')
   if(userDetails) return true
   return false
 }
+
+// 'If its log out ...
 
 const logoutHandler =() =>{
   if(!isLoggedin()) return

@@ -11,6 +11,7 @@ const Search = () => {
   const [allClasses, setAllClasses] = useState([])
   const navigate = useNavigate()
 
+    // Fetch Classes
   const fetchClasses = async () => {
     const responce = await axios.get('http://localhost:4000/api/v1/classes')
     setAllClasses(responce.data)
@@ -22,6 +23,7 @@ const Search = () => {
 
   const [allTrainers, setAllTrainers] = useState([])
 
+  // Fetch Trainer 
   const fetchTrainers = async () => {
     const responce = await axios.get('http://localhost:4000/api/v1/trainers')
     setAllTrainers(responce.data)

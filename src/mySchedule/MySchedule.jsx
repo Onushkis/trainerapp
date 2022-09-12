@@ -16,6 +16,7 @@ const [allUserData , setAllUserData] = useState()
       navigate('/login')
   }
 
+
 const fetchUserData = async () => {
   if(!userData) return
   const response = await axios.get(`http://localhost:4000/api/v1/users/${userData.userId}`)
