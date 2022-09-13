@@ -19,12 +19,14 @@ const Wellcome = () => {
       </div>
     </div>
     <img src={welcomebg} alt=""  className='aspect-square rounded-lg w-full h-96 object-cover ' />
+    <div> 
     <img src={welcomecenter} alt=""  className='aspect-square rounded-lg w-full h-96 object-cover ' />
-    <div className='p-6'> 
+   
     <button type="button" className="block p-4 w-full mt-6 mb-8 text-[24px] text-center font-bold  text-[#000000] bg-[#F1C40E]  border-none focus:border-blue-500  rounded-full   dark:focus:ring-[#9771f3] dark:focus:border-[#9771f3] hover:bg-[#dddbd4] focus:outline-none focus:ring focus:ring-[#9771f3]" 
     onClick={()=>navigate('/popularClasses')} > start training</button>
     </div>
     </div>
+    
   )
 }
 

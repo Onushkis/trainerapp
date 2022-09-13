@@ -4,10 +4,10 @@ import {useNavigate} from 'react-router'
 import { FaBatteryFull, FaSignal} from "react-icons/fa";
 import { HiRss } from "react-icons/hi";
 import { HiMenuAlt3} from "react-icons/hi";
-import abs1 from '../Assets/abs1.jpg'
+/* import abs1 from '../Assets/abs1.jpg'
 import weights1 from '../Assets/weights1.jpg'
 import spinning1 from '../Assets/spinning1.jpg'
-import aerobics1 from '../Assets/aerobics1.jpg'
+import aerobics1 from '../Assets/aerobics1.jpg' */
 
 
 const PopularClasses = () => {
@@ -76,7 +76,7 @@ const navigateToClassDetailsPageHandler = (id) => {
           <div key={element.id } onClick={()=> navigateToClassDetailsPageHandler(element.id)}
           className="relative rounded-2xl overflow-hidden h-full w-2/5 flex-none ">
             <img
-              src={element.asset.url}
+              src={element.asset?.url || ''}
               className=" rounded-2xl object-cover  h-full w-full rounded-br-none"
             />
             <div className="absolute bottom-0 bg-[#F1C40E] w-full p-1 text-left rounded-tr-[40px]">
@@ -97,7 +97,3 @@ const navigateToClassDetailsPageHandler = (id) => {
   }
   
   export default PopularClasses
-
-
-  
-  
