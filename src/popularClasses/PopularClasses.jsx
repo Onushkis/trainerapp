@@ -4,11 +4,11 @@ import {useNavigate} from 'react-router'
 import { FaBatteryFull, FaSignal} from "react-icons/fa";
 import { HiRss } from "react-icons/hi";
 import { HiMenuAlt3} from "react-icons/hi";
-/* import abs1 from '../Assets/abs1.jpg'
+/*  import abs1 from '../Assets/abs1.jpg'
 import weights1 from '../Assets/weights1.jpg'
 import spinning1 from '../Assets/spinning1.jpg'
-import aerobics1 from '../Assets/aerobics1.jpg' */
-
+import aerobics1 from '../Assets/aerobics1.jpg' 
+ */
 
 const PopularClasses = () => {
   const [allClasses, setAllClasses] = useState([])
@@ -72,6 +72,7 @@ const navigateToClassDetailsPageHandler = (id) => {
             <div className="flex mt-8 gap-2 h-4/6 w-full overflow-x-auto">
 
             {allClasses.map((element,index) => {
+
             return (
           <div key={element.id } onClick={()=> navigateToClassDetailsPageHandler(element.id)}
           className="relative rounded-2xl overflow-hidden h-full w-2/5 flex-none ">

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { FaBatteryFull, FaSignal } from 'react-icons/fa'
-import { HiRss } from 'react-icons/hi'
 import axios from 'axios'
 import { useNavigate } from 'react-router'
+// import * as yup from 'yup'
+import { FaBatteryFull, FaSignal } from 'react-icons/fa'
+import { HiRss } from 'react-icons/hi'
+
 
 const Login = () => {
     const [username,setUsername] = useState('')
@@ -11,6 +13,10 @@ const Login = () => {
     const redirectToHomePage = () => {
         navigate('/wellcome')
     }
+
+   
+
+   
 
 useEffect(()=>{
     // todo : implement proper middlewares to handle auth
@@ -51,8 +57,12 @@ useEffect(()=>{
         <h1 className="font-semibold text-[#000000] text-[24px] text-left mt-6">Log in with your credentials</h1>
         <div className='mt-4 '> 
        
+
         {/* form components  */}
-        <form onSubmit={(e)=> loginHandler(e)}>
+
+        
+         <form onSubmit={(e)=> loginHandler(e)}> 
+        
         <input value={username} onChange={(e)=>setUsername(e.target.value)} type="text" id="username" className="block p-4   pl-14 w-full text-[22px]  text-gray-900 bg-gray-50  border border-gray-300 rounded-full dark:placeholder-gray-400 dark:focus:ring-[#9771f3] dark:focus:border-[#9771f3]" placeholder="Enter your email..." required 
         
         />
