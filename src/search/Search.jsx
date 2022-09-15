@@ -121,7 +121,7 @@ setSearchKey(event.target.value)
             {/*element.asset?.url :this means that if there is no asset then it will print undefined  */}
             {/*element.asset?.url || '' :this means that if element.asset?.url results in undefined it will fallback to the empty string*/}
             <img
-              src={element.asset?.url || ''}
+              src={element.asset?.url || ' '}
               className=" rounded-2xl object-cover  h-full w-full rounded-br-none"
             />
             <div className="absolute bottom-0 bg-[#F1C40E] w-full p-1 text-left rounded-tr-[40px]">

@@ -10,21 +10,23 @@ const Login = () => {
     const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
     const navigate = useNavigate()
+
+    // Readirect page from there to there
     const redirectToHomePage = () => {
         navigate('/wellcome')
     }
 
    
+    useEffect(()=>{
+        // todo : implement proper middlewares to handle auth
+        // if the user is logged in redirect him to home page 
+        const userData = window.localStorage.getItem('user')
+        if(userData) redirectToHomePage()
+    }
+        ,[])
 
    
-
-useEffect(()=>{
-    // todo : implement proper middlewares to handle auth
-    // if the user is logged in redirect him to home page 
-    const userData = window.localStorage.getItem('user')
-    if(userData) redirectToHomePage()
-}
-    ,[])
+ // Login api + safe in local storage
 
     const loginHandler = async(e) =>{
      e.preventDefault();
