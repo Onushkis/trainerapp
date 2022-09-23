@@ -8,6 +8,8 @@ import ClassesDetail from './classesDetail/ClassesDetail.jsx'
 import Login from './login/Login.jsx'
 import Wellcome from './wellcome/Wellcome.jsx'
 import NotFound from './NotFound'
+import { Offline, Online } from "react-detect-offline";
+import OfflinePage from './OfflinePage.jsx'
 
 import './App.css'
 function App() {
@@ -29,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <Online>
       <BrowserRouter>
         <Routes>
           <Route path="wellcome" element={<Wellcome />} />
@@ -46,6 +49,12 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </Online>
+    <Offline>
+      <OfflinePage />
+    </Offline>
+        <> 
+      </>
     </div>
   )
 }

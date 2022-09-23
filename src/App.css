@@ -2,10 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+input[type="radio"] {
+  opacity: 0;
 }
+
+.star {
+cursor: pointer;
+transition: color 200ms;
+}
+
+/*  yellow #ffc107
+  gray #e4e5e9
+*/
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

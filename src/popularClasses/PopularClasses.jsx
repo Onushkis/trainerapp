@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router'
 import { FaBatteryFull, FaSignal} from "react-icons/fa";
 import { HiRss } from "react-icons/hi";
 import { HiMenuAlt3} from "react-icons/hi";
+import HeaderPwe from '../HeaderPwe';
 /*  import abs1 from '../Assets/abs1.jpg'
 import weights1 from '../Assets/weights1.jpg'
 import spinning1 from '../Assets/spinning1.jpg'
@@ -93,6 +94,7 @@ const navigateToClassDetailsPageHandler = (id) => {
         </div>
        
            </div>
+           <HeaderPwe />
       </div>
     )
   }
