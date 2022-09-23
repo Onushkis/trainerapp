@@ -11,6 +11,8 @@ import weights1 from '../Assets/weights1.jpg'
 import spinning1 from '../Assets/spinning1.jpg'
 import aerobics1 from '../Assets/aerobics1.jpg' 
  */
+import offline from '../Assets/offline.jpg'
+
 
 const PopularClasses = () => {
   const [allClasses, setAllClasses] = useState([])
@@ -52,6 +54,12 @@ const navigateToClassDetailsPageHandler = (id) => {
           pathname:'/',
           search:'page=popularClasses'
         })}> <HiMenuAlt3 /></div>
+        </div>
+
+<div className='mt-6'> 
+        <h1 className='text-lg '>Sorry No Internet Connection</h1>
+        <img src={offline} />  
+
         </div>
 
 <Online >
