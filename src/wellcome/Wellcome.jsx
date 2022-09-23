@@ -2,7 +2,7 @@ import React from 'react'
 import { FaBatteryFull, FaSignal } from 'react-icons/fa'
 import { HiRss } from 'react-icons/hi'
 import { useNavigate } from 'react-router'
-import welcomebg from '../Assets/welcomebg.jpg'
+import welcomebg from "../Assets/welcomebg.jpg"
 import welcomecenter from '../Assets/welcomecenter.jpg'
 
 

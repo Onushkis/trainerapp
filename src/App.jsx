@@ -31,14 +31,14 @@ function App() {
 
   return (
     <div className="App">
-      <Online>
       <BrowserRouter>
         <Routes>
           <Route path="wellcome" element={<Wellcome />} />
+     
 
           <Route path="/" element={<Home />} />
+         
           <Route path="search" element={<Search />} />
-
           <Route path="popularClasses" element={<PopularClasses />} />
           <Route path="mySchedule" element={<MySchedule />} />
           <Route path="classesDetail" element={<ClassesDetail />} />
@@ -49,9 +49,9 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      </Online>
+     
     <Offline>
-      <OfflinePage />
+      {/* <OfflinePage /> */}
     </Offline>
         <> 
       </>
