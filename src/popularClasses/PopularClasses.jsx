@@ -5,7 +5,7 @@ import { FaBatteryFull, FaSignal} from "react-icons/fa";
 import { HiRss } from "react-icons/hi";
 import { HiMenuAlt3} from "react-icons/hi";
 import HeaderPwe from '../HeaderPwe';
-import { Online } from 'react-detect-offline';
+import { Online, Offline } from 'react-detect-offline';
 /*  import abs1 from '../Assets/abs1.jpg'
 import weights1 from '../Assets/weights1.jpg'
 import spinning1 from '../Assets/spinning1.jpg'
@@ -45,6 +45,9 @@ const navigateToClassDetailsPageHandler = (id) => {
             <FaSignal/>
             <HiRss />
           < FaBatteryFull />
+          <div>
+            jjjjj
+          </div>
   
         </div>
         </div>
@@ -62,7 +65,7 @@ const navigateToClassDetailsPageHandler = (id) => {
 
         </div>
 
-<Online >
+<Offline >
         {randClass ? (<>
         <div className='mt-5 h-3/6  w-full relative rounded-2xl overflow-hidden' onClick={()=> navigateToClassDetailsPageHandler(randClass.id)}>
 
@@ -103,7 +106,7 @@ const navigateToClassDetailsPageHandler = (id) => {
         </div>
        
            </div>
-        </Online>
+        </Offline>
            <HeaderPwe />
       </div>
     )
